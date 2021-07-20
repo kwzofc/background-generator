@@ -1,10 +1,13 @@
 {
   "name": "background-generator",
+  "homepage": "https://github.com/kwzofc/background-generator#readme",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
   "scripts": {
-    "build": "browserify script.js > bundle.js && live-server"
+    "build": "browserify script.js > bundle.js && live-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -15,8 +18,8 @@
   "bugs": {
     "url": "https://github.com/kwzofc/background-generator/issues"
   },
-  "homepage": "https://github.com/kwzofc/background-generator#readme",
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21"
   }
 }
